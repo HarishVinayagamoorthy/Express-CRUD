@@ -54,12 +54,12 @@
 // app.listen(8000,()=>console.log("Server is listening 8000"))
 
 
-const express = require('express') //commonJS Import older version
-// import express from 'express'//ES Module Import add "type": "module" in package.json
-const dotenv = require('dotenv')
-const cors = require('cors')
+// const express = require('express') //commonJS Import older version
+import express from 'express'//ES Module Import add "type": "module" in package.json
+import dotenv from 'dotenv'
+import cors from 'cors'
+import AppRoutes from './src/routes/index.js'
 
-const AppRoutes = require('./src/routes')
 dotenv.config()
 const PORT = process.env.PORT
 const app = express()
